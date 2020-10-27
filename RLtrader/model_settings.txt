@@ -1,0 +1,12 @@
+[model settings]
+stock_code = 005930
+rl_method = a2c
+net = lstm
+num_steps = 5
+discount_factor = 0.9
+balance = 10000000
+delayed_reward_threshold = 0.05
+output_name =  samsung
+value_network_name = final_value
+policy_network_name = final_policy
+start_date = 20190101
