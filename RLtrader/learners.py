@@ -10,7 +10,7 @@ from environment import Environment
 from agent import Agent
 from networks import Network, DNN, LSTMNetwork, CNN
 from visualizer import Visualizer
-
+from datetime import datetime
 
 class ReinforcementLearner:
     __metaclass__ = abc.ABCMeta
@@ -228,7 +228,7 @@ class ReinforcementLearner:
         )
         self.visualizer.save(os.path.join(
             self.epoch_summary_dir, 
-            'epoch_summary_{}.png'.format(epoch_str))
+            'epoch_summary_{}_{}.png'.format(epoch_str, datetime.now().strftime('%Y%m%d_%H%M%S')))
         )
 
     def run(
